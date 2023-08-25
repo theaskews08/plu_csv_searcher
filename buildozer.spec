@@ -6,13 +6,13 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = plu
 
 # (str) Package name
 package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.test
+package.domain = org.test.myapp
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -42,17 +42,16 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0,kivy_garden.graph,numpy,pandas,kivymd
-
+requirements = python3,kivy==2.1.0,kivy_garden.graph,numpy,pandas,kivymd==1.1.1, docutils,kivy-deps.angle, kivy-deps.glew, kivy-deps.sdl2, Kivy-Garden, pygments, pypiwin32
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/presplash.png
+presplash.filename = %(source.dir)s/data/icon.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/icon.png
+icon.filename = %(source.dir)s/data/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -103,7 +102,7 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-#android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
+android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
